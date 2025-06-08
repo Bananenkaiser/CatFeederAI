@@ -1,0 +1,6 @@
+Ziel:
+
+Es soll automatisch getrackt werden, wieviel Futter gefressen worden ist
+
+Das Futter wird auf eine kleine Waage gestellt und die Waage wird durch einen Knopf genullt.
+
