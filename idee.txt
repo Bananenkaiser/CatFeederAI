@@ -4,3 +4,21 @@ Es soll automatisch getrackt werden, wieviel Futter gefressen worden ist
 
 Das Futter wird auf eine kleine Waage gestellt und die Waage wird durch einen Knopf genullt.
 
+Eine NoIr Kamera erfasst, wenn eine Katze sich nähert.
+
+Mit YOLO wird eine live kategorisierung gemacht, um welche Katze es sich handelt.
+Sobald eine Katze erkannt wird, wird das Gewicht des Futters in eine Variable geschrieben
+Wenn die erkannte Katze nicht mehr in der Kamera zu sehen ist, wird das neue Gewicht von dem Gewicht in der Variable abgezogen
+und anschließend in eine PostgreSQL Datenbank geschrieben.
+
+Probleme:
+
+Wie bekomme ich zwei Fressnäpfe gleichzeitig überwacht?
+    - Umstieg auf einen großen Futterteller?
+
+Was passiert wenn beide Katzen gleichzeitig an einem Teller fressen?
+
+Wie erkenne ich automatisch die Futtersorte?
+
+Wenn keine Verbindung zum NAS steht, sollen die einträge solange zwischengespeichert werden, bis wieder eine Verbindung aufgebaut ist.
+    - Es soll bei jedem neuen Eintrag ein Verbindungsaufbau versucht werden

@@ -1,0 +1,15 @@
+# Ignoriere die Datenbank-Konfigurationsdatei
+db_config.json
+
+# Ignoriere Python-Cache-Dateien
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignoriere virtuelle Umgebungen
+env/
+venv/
+
+# Ignoriere andere häufige Dateien, die nicht ins Repository gehören
+*.log
+*.sqlite
