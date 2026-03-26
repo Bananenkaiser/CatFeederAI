@@ -11,7 +11,7 @@
 - [ ] Bauteile bestellen:
   - Google Coral SOM G313-04345-01 — **~110 €** (Mouser)
   - SO-DIMM 260-pin Buchse TE 2309990-1 — **~5 €**
-  - Arducam IMX219 NoIR Kamera (CSI-2) — **~25 €**
+  - ~~Arducam IMX219 NoIR Kamera (CSI-2) — **~25 €**~~ → **vorhanden** (RPi NoIR Camera V2, gleicher IMX219 Sensor, kompatibler 15-pin CSI-2 Stecker)
   - FPC-Stecker 15-pin Molex 5031480150 — **~1 €**
   - HX711 SOIC-16 (Waagen-ADC) — **~1–2 €**
   - Wägezelle 1kg TAL220B — **~10 €**
@@ -21,7 +21,7 @@
   - BAT54S SOT-23 Schottky-Diode — **~0,50 €**
   - Kondensatoren, Widerstände, LEDs, Taster (Sortiment) — **~8 €**
   - PCB-Fertigung 4-lagig (JLCPCB, 5 Stück) — **~20 €**
-  - **Gesamt: ~190 €**
+  - **Gesamt: ~165 €** (Kamera bereits vorhanden)
 - [ ] PCB bestücken und löten
 
 ## Modell-Konvertierung (PyTorch → Edge TPU)
