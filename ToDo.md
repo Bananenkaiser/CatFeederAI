@@ -8,7 +8,20 @@
 - [ ] Schaltplan in KiCad erstellen (Carrier Board)
 - [ ] PCB-Layout erstellen (4-lagig, Impedanzkontrolle für MIPI CSI + USB)
 - [ ] Gerber-Dateien an JLCPCB / PCBWay senden
-- [ ] Bauteile bestellen (BOM siehe Hardware-Plan)
+- [ ] Bauteile bestellen:
+  - Google Coral SOM G313-04345-01 — **~110 €** (Mouser)
+  - SO-DIMM 260-pin Buchse TE 2309990-1 — **~5 €**
+  - Arducam IMX219 NoIR Kamera (CSI-2) — **~25 €**
+  - FPC-Stecker 15-pin Molex 5031480150 — **~1 €**
+  - HX711 SOIC-16 (Waagen-ADC) — **~1–2 €**
+  - Wägezelle 1kg TAL220B — **~10 €**
+  - TPS54331DR SOIC-8 Buck Converter (×2) — **~4 €**
+  - USB-C Buchse USB4135-GF-A — **~2 €**
+  - CP2102N-A02-GQFN24 USB-UART Bridge — **~4 €**
+  - BAT54S SOT-23 Schottky-Diode — **~0,50 €**
+  - Kondensatoren, Widerstände, LEDs, Taster (Sortiment) — **~8 €**
+  - PCB-Fertigung 4-lagig (JLCPCB, 5 Stück) — **~20 €**
+  - **Gesamt: ~190 €**
 - [ ] PCB bestücken und löten
 
 ## Modell-Konvertierung (PyTorch → Edge TPU)
