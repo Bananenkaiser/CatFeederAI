@@ -2,39 +2,33 @@
 
 ## Custom Hardware (PCB)
 
-**Entscheidung:** Google Coral SOM (G313-04345-01) als Hauptmodul statt Raspberry Pi
+**Entscheidung:** Radxa CM3 (Rockchip RK3566) als Hauptmodul — läuft PyTorch direkt, keine Modell-Konvertierung nötig, 5–10 FPS reichen für Katzen-Erkennung am Napf
 
-- [ ] Coral SOM Datenblatt + Referenzschaltplan herunterladen (coral.ai/docs/som/datasheet)
-- [ ] Schaltplan in KiCad erstellen (Carrier Board)
+- [ ] Radxa CM3 Datenblatt + CM4-Carrier-Board Referenzdesign herunterladen (radxa.com/cm3)
+- [ ] Schaltplan in KiCad erstellen (Carrier Board, CM4-kompatibler Formfaktor)
 - [ ] PCB-Layout erstellen (4-lagig, Impedanzkontrolle für MIPI CSI + USB)
 - [ ] Gerber-Dateien an JLCPCB / PCBWay senden
 - [ ] Bauteile bestellen:
-  - Google Coral SOM G313-04345-01 — **~110 €** (Mouser)
-  - SO-DIMM 260-pin Buchse TE 2309990-1 — **~5 €**
-  - ~~Arducam IMX219 NoIR Kamera (CSI-2) — **~25 €**~~ → **vorhanden** (RPi NoIR Camera V2, gleicher IMX219 Sensor, kompatibler 15-pin CSI-2 Stecker)
-  - FPC-Stecker 15-pin Molex 5031480150 — **~1 €**
+  - Radxa CM3 (RK3566, 1GB RAM, WiFi/BT) — **~35 €** (radxa.com / AliExpress)
+  - CM4-kompatibler Stecker (2× 100-pin Hirose DF40) — **~4 €**
+  - ~~Arducam IMX219 NoIR Kamera — **~25 €**~~ → **vorhanden** (RPi NoIR Camera V2, kompatibler CSI-2 Stecker)
+  - FPC-Stecker 15-pin, 1.0mm Raster — **~1 €**
   - HX711 SOIC-16 (Waagen-ADC) — **~1–2 €**
   - Wägezelle 1kg TAL220B — **~10 €**
   - TPS54331DR SOIC-8 Buck Converter (×2) — **~4 €**
-  - USB-C Buchse USB4135-GF-A — **~2 €**
+  - USB-C Buchse — **~2 €**
   - CP2102N-A02-GQFN24 USB-UART Bridge — **~4 €**
   - BAT54S SOT-23 Schottky-Diode — **~0,50 €**
   - Kondensatoren, Widerstände, LEDs, Taster (Sortiment) — **~8 €**
   - PCB-Fertigung 4-lagig (JLCPCB, 5 Stück) — **~20 €**
-  - **Gesamt: ~165 €** (Kamera bereits vorhanden)
+  - **Gesamt: ~90 €** (Kamera bereits vorhanden)
 - [ ] PCB bestücken und löten
 
-## Modell-Konvertierung (PyTorch → Edge TPU)
+## Software-Setup (Radxa CM3)
 
-- [ ] MobileNetV2: PyTorch → ONNX → TFLite (int8 quantisiert) → EdgeTPU compile
-- [ ] YOLOv8n: `model.export(format='tflite', int8=True)` → EdgeTPU compile
-- [ ] Inferenz auf Coral SOM testen und Genauigkeit prüfen
-
-## Software-Setup (Coral SOM)
-
-- [ ] Mendel Linux / Debian auf Coral SOM aufsetzen
-- [ ] PyCoral + TFLite Runtime installieren
-- [ ] NoIR-Kamera (Arducam IMX219) per MIPI CSI einrichten
+- [ ] Debian / Ubuntu auf Radxa CM3 aufsetzen
+- [ ] Python + PyTorch + Ultralytics installieren
+- [ ] NoIR-Kamera (RPi NoIR Camera V2) per MIPI CSI einrichten
 - [ ] HX711 Waagen-Auslese in Python implementieren (SPI/GPIO)
 - [ ] Nullstellung der Waage per Taster realisieren
 - [ ] Autostart beim Hochfahren konfigurieren
