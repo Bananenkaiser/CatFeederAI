@@ -1,6 +1,12 @@
 # Dataset - Bilddaten lokal behalten, nicht ins Repository
-cats/
-data_split/
+data/raw/
+data/split/
+
+# ML Modelle
+models/
+
+# Datenbank-Konfiguration
+config/
 
 # Python
 __pycache__/
@@ -21,9 +27,7 @@ env/
 # Jupyter Notebooks
 .ipynb_checkpoints/
 
-# ML Modelle & Checkpoints
-*.pt
-*.pth
+# ML Checkpoints (sonstige Formate)
 *.ckpt
 *.h5
 *.keras
@@ -35,7 +39,6 @@ checkpoints/
 logs/
 
 # Datenbank
-db_config.json
 *.sqlite
 
 # Betriebssystem
