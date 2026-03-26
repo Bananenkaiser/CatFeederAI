@@ -49,6 +49,10 @@ desktop.ini
 *.swp
 *.swo
 
+# Persönlich / Lokal
+ToDo.md
+.claude/
+
 # Sonstiges
 *.log
 .env
